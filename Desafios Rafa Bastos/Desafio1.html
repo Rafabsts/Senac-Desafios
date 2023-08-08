@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Números Pares de 1 a 1000</title>
+</head>
+<body>
+  <h1>Números Pares de 1 a 1000:</h1>
+  <ul id="numerosPares"></ul>
+
+  <script>// Função para imprimir os números pares de 1 a 1000
+  function imprimirNumerosPares() {
+      var listaNumerosPares = document.getElementById("numerosPares");
+      for (var i = 2; i <= 1000; i += 2) {
+        var itemLista = document.createElement("li");
+        itemLista.textContent = i;
+        listaNumerosPares.appendChild(itemLista);
+      }
+    }
+  
+    // Chamando a função para imprimir os números pares quando a página carrega
+    imprimirNumerosPares();
+    </script>
+</body>
+</html>

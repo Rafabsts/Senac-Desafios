@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+</head>
+<body>
+    <h1>imprimindo tabuada do numero 5 de 1 a 10:</h1>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Tabuada do número 5</title>
+</head>
+<body>
+    <h1>Tabuada do número 5</h1>
+    <table>
+        <tr>
+            <th>Número</th>
+            <th>Resultado</th>
+        </tr>
+        <script>
+            // Função para calcular e imprimir a tabuada do número 5 de 1 a 10
+            function imprimirTabuadaDoCinco() {
+                var tableBody = document.createElement('tbody');
+                
+                for (var i = 1; i <= 10; i++) {
+                    var resultado = 5 * i;
+                    var row = document.createElement('tr');
+                    var numeroCell = document.createElement('td');
+                    var resultadoCell = document.createElement('td');
+                    
+                    numeroCell.textContent = '5 x ' + i;
+                    resultadoCell.textContent = resultado;
+                    
+                    row.appendChild(numeroCell);
+                    row.appendChild(resultadoCell);
+                    tableBody.appendChild(row);
+                }
+                
+                var table = document.createElement('table');
+                table.appendChild(tableBody);
+                
+                document.body.appendChild(table);
+            }
+
+            // Chamar a função quando a página terminar de carregar
+            window.onload = imprimirTabuadaDoCinco;
+        </script>
+    </table>
+</body>
+</html>
+
+</body>
+</html>

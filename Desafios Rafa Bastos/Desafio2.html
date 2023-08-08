@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soma dos Números de 1 a 200</title>
+</head>
+<body>
+    <h1> calculando a  Soma dos Números de 1 a 200</h1>
+    <p id="output"></p>
+
+    <script>
+        // Função para calcular a soma dos números de 1 a 200
+        function calcularSomaDeUmAteDuzentos() {
+            var outputElement = document.getElementById('output');
+            var soma = 0;
+
+            for (var i = 1; i <= 200; i++) {
+                soma += i;
+            }
+
+            outputElement.textContent = 'A soma dos números de 1 a 200 é: ' + soma;
+        }
+
+        // Chamar a função quando a página terminar de carregar
+        window.onload = calcularSomaDeUmAteDuzentos;
+    </script>
+</body>
+</html>

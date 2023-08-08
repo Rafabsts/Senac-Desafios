@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Números Decrescentes</title>
+</head>
+<body>
+    <h1>Números Decrescentes de 10 a 1</h1>
+    <p id="output"></p>
+
+    <script>
+        // Função para imprimir números decrescentes de 10 a 1
+        function imprimirNumerosDecrescentes() {
+            var outputElement = document.getElementById('output');
+            var numerosDecrescentes = '';
+
+            for (var i = 10; i >= 1; i--) {
+                numerosDecrescentes += i + ' ';
+            }
+
+            outputElement.textContent = numerosDecrescentes;
+        }
+
+        // Chamar a função quando a página terminar de carregar
+        window.onload = imprimirNumerosDecrescentes;
+    </script>
+</body>
+</html>
