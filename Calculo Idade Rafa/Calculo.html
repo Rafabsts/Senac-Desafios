@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculo Idade </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/CalcularIdade.js">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculador de Idade</h1>
+        <label for="birth-day">Dia:</label>
+        <input type="number" id="birth-day" min="1" max="31">
+        <label for="birth-month">Mes:</label>
+        <input type="number" id="birth-month" min="1" max="12">
+        <label for="birth-year"> Ano:</label>
+        <input type="number" id="birth-year" min="1" max="1900">
+        <button id="calculate-btn">Calcular Idade</button>
+        <div id="result"></div>
+        </div>
+        <script>
+            document.getElementById('calculate-btn').addEventListener('click',function() {
+    const day= parseInt(document.getElementById('birth-day').value);
+    const month = parseInt(document.getElementById('birth-month').value);
+    const year = parseInt(document.getElementById('birth-year').value);
+
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth() + 1;
+    const currentDay = currentDate.getDate();
+
+    let age = currentYear - year;
+
+    if(currentMonth < month ||(currentMonth === month && currentDay < day)) {
+
+    
+    }
+
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = 'Sua idade é ${age} anos.';
+});
+        </script>
+        
+
+
+</body>
+</html>
