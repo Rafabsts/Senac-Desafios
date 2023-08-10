@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de Maioridade</title>
+</head>
+<body>
+  <script>
+    function verificarMaioridade(idade) {
+      const mensagem = idade >= 18 ? "Maior de idade" : "Menor de idade";
+      return mensagem;
+    }
+
+    const idade1 = 17;
+    const idade2 = 19;
+
+    const mensagemPessoa1 = verificarMaioridade(idade1);
+    const mensagemPessoa2 = verificarMaioridade(idade2);
+
+    document.write(`<p>Pessoa 1 é ${mensagemPessoa1}.</p>`);
+    document.write(`<p>Pessoa 2 é ${mensagemPessoa2}.</p>`);
+  </script>
+</body>
+</html>

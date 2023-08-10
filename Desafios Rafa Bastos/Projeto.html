@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Tarefas</title>
+  <link rel="stylesheet" href="Projeto Tarefa.css">
+</head>
+<body>
+  <h1>Registro de Tarefas</h1>
+
+  <input type="text" id="novaTarefa" placeholder="Nova tarefa">
+  <button id="adicionarTarefa">Adicionar</button>
+
+  <ul id="listaTarefas"></ul>
+
+  <script>
+    const novaTarefaInput = document.getElementById("novaTarefa");
+    const adicionarTarefaBtn = document.getElementById("adicionarTarefa");
+    const listaTarefas = document.getElementById("listaTarefas");
+
+    adicionarTarefaBtn.addEventListener("click", () => {
+      const novaTarefa = novaTarefaInput.value;
+      if (novaTarefa.trim() !== "") {
+        const li = document.createElement("li");
+        li.textContent = novaTarefa;
+        listaTarefas.appendChild(li);
+        novaTarefaInput.value = "";
+      }
+    });
+
+    listaTarefas.addEventListener("click", (event) => {
+      if (event.target.tagName === "LI") {
+        event.target.classList.toggle("concluida");
+      }
+    });
+
+    listaTarefas.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+      if (event.target.tagName === "LI") {
+        listaTarefas.removeChild(event.target);
+      }
+    });
+  </script>
+
+  <style>
+    .concluida {
+      text-decoration: line-through;
+    }
+  </style>
+</body>
+</html>
